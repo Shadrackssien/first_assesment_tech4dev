@@ -38,8 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  border: 1px solid #4d4fece8;
+  gap: 30px;
   padding: 10px;
   font-weight: bold;
 }
