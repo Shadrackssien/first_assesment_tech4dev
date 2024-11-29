@@ -101,7 +101,7 @@ a {
   gap: 20px;
   font-size: 1rem;
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .add-to-cart {
@@ -145,8 +145,7 @@ a {
   font-size: 1rem;
   font-weight: bold;
   font-style: italic;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
   transition: background-color 0.3s ease-in-out;
   font-style: italic;
   &:hover {
