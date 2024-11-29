@@ -72,6 +72,4 @@ const product = new Product({
 
 // const productService = new ProductService();
 
-// productService.getProducts().then((products) => {
-//   console.log("Fetched Products:", products);
-// });
+// productService.getProducts()

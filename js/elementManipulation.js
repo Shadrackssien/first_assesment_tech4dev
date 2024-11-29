@@ -35,7 +35,7 @@ export const createCard = (product) => {
   details.classList.add("details");
 
   const link = document.createElement("a");
-  link.href = "#";
+  link.href = `details.html?id=${product.id}`;
   link.textContent = "View details";
 
   // SVG icon

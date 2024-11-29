@@ -148,6 +148,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
+  padding: 0 40px;
 }
 
 .trending-title {
@@ -195,6 +196,7 @@ button {
   gap: 30px;
   justify-content: center;
   align-items: start;
+  padding: 0 40px;
 }
 
 .card {
