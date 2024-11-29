@@ -24,11 +24,12 @@ const displayProductDetails = (product) => {
 
   detailsContainer.innerHTML = `
   <div class="head">
-  <h1 class="title">${product.title}</h1>
+
     <img class="image" src="${product.image}" alt="${product.title}" />
   </div>
   <div class="body">
-    <p class="price"><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+  <h1 class="title">${product.title}</h1>
+    <p class="price"><strong>Price:</strong> $ ${product.price.toFixed(2)}</p>
     <p class="description"><strong>Description:</strong> ${
       product.description
     }</p>
@@ -36,6 +37,11 @@ const displayProductDetails = (product) => {
     <p class="rating"><strong>Rating:</strong> ${product.rating.rate} (${
     product.rating.count
   } reviews)</p>
+    <div class="buttons">
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+    </div>
+    
   </div>
   `;
 };
