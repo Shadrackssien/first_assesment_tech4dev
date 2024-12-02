@@ -3,39 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link href="./src/output.css" rel="stylesheet" />
     <title>rendezvous</title>
   </head>
   <body>
     <!-- header -->
-    <div class="header">
+    <div
+      class="flex w-[100%] h-[640px] flex-col bg-[url('/assets/header.jpg')] bg-cover bg-center"
+    >
       <!-- navigation bar -->
-      <div class="nav">
-        <div class="logo">rendezvous</div>
+      <div
+        class="flex justify-between mt-12 mx-16 items-center h-[80px] bg-[#FFFFFF99] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
+      >
+        <div class="p-2 gap-2 font-bold text-3xl cursor-pointer">
+          rendezvous
+        </div>
 
-        <div class="links">
+        <div class="p-2 gap-4 flex font-bold text-[16px]">
           <a class="discover" href="#">Discover</a>
           <a class="about" href="#">About Us</a>
           <a class="faqs" href="#">FAQs</a>
           <a class="contact" href="#">Contact Us</a>
         </div>
 
-        <div class="auth">
-          <div class="login">Login</div>
-          <div class="signup">Sign Up</div>
+        <div class="flex items-center gap-6 font-bold text-[16px]">
+          <button class="cursor-pointer">Log in</button>
+          <button class="button">Sign Up</button>
         </div>
       </div>
 
       <!-- hero section -->
-      <div class="hero">
-        <div class="hero-text">
+      <div class="flex justify-between mt-[310px] mx-16">
+        <div
+          class="text-[32px] leading-tight font-bold w-[531px] h-[160px] text-[#FFFFFF]"
+        >
           Ready to Rock? Discover the Hottest Events Here - Your Calendar's New
           Best Friend!
         </div>
 
-        <div class="search">
+        <div
+          class="flex items-center justify-between rounded-[20px] mt-8 p-6 bg-[#FFFFFF] w-[660px] h-[100px]"
+        >
           <!-- search bar ??-->
-          <div class="search-box">
+          <div class="flex items-center justify-center gap-4 p-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -49,40 +59,44 @@
               />
             </svg>
 
-            <input type="text" placeholder="Search for an events" />
+            <input
+              class="outline-none w-[143px] h-[19px] text-[16px] text-[#4F4F4F]"
+              type="text"
+              placeholder="Search for an event"
+            />
           </div>
 
-          <select class="dropdown">
+          <select
+            class="flex gap-3 px-5 border-l-2 border-[#E0E0E0] outline-none text-[#4F4F4F]"
+          >
             <option value="location">Categories</option>
             <option value="location">Location</option>
             <option value="event">Event</option>
             <option value="artist">Artist</option>
           </select>
-          <button>Search</button>
+          <button class="button">Search</button>
         </div>
       </div>
     </div>
 
     <!-- main content -->
-    <div class="main">
-      <div class="trending">
-        <div class="trending-title">Trending events</div>
-        <div class="view-all">
-          <a href="#">
-            View all trending events
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              class="size-4"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
+    <div class="flex flex-col m-16 font-semibold bg-[#FFFFFF]">
+      <div class="flex justify-between">
+        <div class="text-[32px]">Trending events</div>
+        <div class="cursor-pointer flex items-center justify-center gap-1">
+          <a class="text-primary" href="#"> View all trending events </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-5 text-primary"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </div>
       </div>
 
