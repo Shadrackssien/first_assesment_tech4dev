@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./*.{html,js}", "./js/*js"],
   theme: {
@@ -8,6 +9,7 @@ module.exports = {
       },
       colors: {
         primary: "#432361",
+        ...colors,
       },
       container: {
         center: true,

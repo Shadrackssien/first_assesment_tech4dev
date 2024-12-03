@@ -20,6 +20,6 @@
 
 @layer utilities {
   #container {
-    @apply mt-6 grid grid-cols-3 justify-between items-center;
+    @apply my-8 grid grid-cols-3 justify-between items-center;
   }
 }

@@ -16,7 +16,8 @@ export const createCard = (product) => {
 
   // title
   const title = document.createElement("div");
-  title.className = "mx-4 text-[16px] font-semibold leading-[18.75px] mt-1";
+  title.className =
+    "mx-4 text-[16px] font-semibold leading-[18.75px] mt-1 text-ellipsis line-clamp-2 ";
   title.textContent = product.title;
   card.appendChild(title);
 
@@ -28,7 +29,8 @@ export const createCard = (product) => {
 
   // description
   const description = document.createElement("div");
-  description.className = "mx-4 mb-3 text-[14px] font-normal leading-[16.41px]";
+  description.className =
+    "mx-4 mb-3 text-[14px] font-normal leading-[16.41px] text-ellipsis line-clamp-3 overflow-hidden";
   description.textContent = product.description;
   card.appendChild(description);
 
