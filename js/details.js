@@ -24,8 +24,8 @@ const displayProductDetails = (product) => {
 
   detailsContainer.innerHTML = `
   <!-- image -->
-  <div class="mx-16 my-8">
-    <img class="w-[100%] h-[480px] object-cover object-center" src="${
+  <div class="mx-16 mt-8 mb-[60px] rounded-lg">
+    <img class="w-[100%] h-[480px] object-cover object-center border border-gray-300 rounded-[20px]" src="${
       product.image
     }" alt="${product.title}" />
   </div>
