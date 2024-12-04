@@ -13,7 +13,7 @@
     >
       <!-- navigation bar -->
       <div
-        class="flex justify-between mt-12 mx-16 items-center h-[80px] bg-[#FFFFFF99] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
+        class="flex justify-between mt-12 mx-16 items-center h-[80px] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
       >
         <div class="p-2 gap-2 font-bold text-3xl cursor-pointer">
           rendezvous
@@ -133,15 +133,13 @@
     </div>
 
     <!-- Event Types -->
-    <div class="my-8 grid grid-cols-3 justify-between mx-16">
-      <div class="my-8">
-        <p
-          class="text-[32px] leading-[37.5px] w-[393px] h-[78px] font-gilroy font-semibold"
-        >
+    <div class="my-16 grid grid-cols-3 justify-between mx-16">
+      <div class="my-16">
+        <p class="text-[32px] leading-[37.5px] font-gilroy font-semibold">
           Discover a World of Events Tailored Just for You
         </p>
         <button
-          class="mt-6 flex items-center justify-center bg-[#783EAD] w-[154px] h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] cursor-pointer"
+          class="mt-8 flex items-center justify-center bg-[#783EAD] w-[154px] h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] cursor-pointer"
         >
           view all events
         </button>
@@ -182,38 +180,48 @@
 
     <!-- footer -->
     <div
-      class="flex justify-between w-[1440px] h-[343px] bg-blue-400 mt-8 border"
+      class="flex justify-between w-[100%] h-[343px] bg-primary text-white mt-[100px] py-12 px-16"
     >
-      <div>
-        <p>rendezvous</p>
-        <p>Your Personal Event Sherpa: Curating Awesome, One Click at a Time</p>
+      <div class="flex flex-col gap-4">
+        <p class="text-[32px] font-bold leading-[37.5px]">rendezvous</p>
+        <p class="w-[332px] font-normal text-[16px] leading-[18.75px]">
+          Your Personal Event Sherpa: Curating Awesome, One Click at a Time
+        </p>
       </div>
 
-      <div class="flex justify-around gap-4">
+      <div class="flex justify-around gap-[84px]">
         <!-- Feature links-->
-        <div class="flex flex-col">
-          <p>Feature</p>
-          <a href="#">Events discovery</a>
-          <a href="#">Ticketing</a>
+        <div class="flex flex-col gap-[18px]">
+          <p class="font-bold text-[20px]">Feature</p>
+          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
+            <a href="#">Events discovery</a>
+            <a href="#">Ticketing</a>
+          </div>
         </div>
 
         <!-- Company links -->
-        <div class="flex flex-col">
-          <p>Company</p>
-          <a href="#">About us</a>
-          <a href="#">FAQs</a>
-          <a href="#">Careers</a>
-          <a href="#">Support</a>
+        <div class="flex flex-col gap-[18px]">
+          <p class="font-bold text-[20px]">Company</p>
+          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
+            <a href="#">About us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Careers</a>
+            <a href="#">Support</a>
+          </div>
         </div>
 
         <!-- contact us info -->
-        <div>
-          <p>Contact Us</p>
-          <p>info@events.com</p>
-          <p>+234 701 345 6789</p>
-          <p>Race Course, 8/9 Marina,</p>
-          <p>Onikan, Lagos Lagos, 4aa Force</p>
-          <p>Rd, Lagos Island 102273, Lagos</p>
+        <div class="flex flex-col gap-[18px]">
+          <p class="font-bold text-[20px]">Contact Us</p>
+          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
+            <p>info@events.com</p>
+            <p>+234 701 345 6789</p>
+            <div>
+              <p>Race Course, 8/9 Marina,</p>
+              <p>Onikan, Lagos Lagos, 4aa Force</p>
+              <p>Rd, Lagos Island 102273, Lagos</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
