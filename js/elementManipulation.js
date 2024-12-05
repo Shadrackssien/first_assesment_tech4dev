@@ -4,12 +4,12 @@ export const createCard = (product) => {
   // card container
   const card = document.createElement("div");
   card.className =
-    "my-4 border border-1-[#E0E0E0] rounded-lg bg-white flex flex-col gap-2 w-[421px] h-[488px] shadow-lg hover:shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.02] text-black no-underline";
+    " mx-auto border border-1-[#E0E0E0] rounded-lg bg-white flex flex-col gap-4 w-96 md:w-full h-[488px] shadow-lg text-black no-underline";
 
   // image
   const image = document.createElement("img");
   image.className =
-    "w-auto h-1/2 object-cover object-center mx-auto mt-4 rounded-t-lg";
+    "w-auto h-1/2 object-cover object-center mx-auto mt-4 rounded-t-lg transition-all duration-300 ease-in-out hover:scale-[1.02]";
   image.src = product.image;
   image.alt = product.title;
   card.appendChild(image);

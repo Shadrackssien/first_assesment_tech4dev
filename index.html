@@ -6,46 +6,141 @@
     <link href="./src/output.css" rel="stylesheet" />
     <title>rendezvous</title>
   </head>
-  <body>
-    <!-- header -->
-    <div
-      class="flex w-[100%] h-[640px] flex-col bg-[url('/assets/header.jpg')] bg-cover bg-center"
-    >
-      <!-- navigation bar -->
+  <body class="h-screen">
+    <div class="overflow-x-hidden">
+      <!-- header -->
       <div
-        class="flex justify-between mt-12 mx-16 items-center h-[80px] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
+        class="relative flex w-[100%] h-[640px] flex-col bg-[url('/assets/header.jpg')] bg-cover bg-center"
       >
-        <div class="p-2 gap-2 font-bold text-3xl cursor-pointer">
-          rendezvous
-        </div>
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60 lg:bg-opacity-30">
+          <!-- navigation bar -->
+          <div
+            class="flex justify-between mt-12 mx-auto items-center w-[92%] h-[80px] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
+          >
+            <div class="font-bold md:text-3xl text-2xl cursor-pointer">
+              rendezvous
+            </div>
 
-        <div class="p-2 gap-4 flex font-bold text-[16px]">
-          <a class="discover" href="#">Discover</a>
-          <a class="about" href="#">About Us</a>
-          <a class="faqs" href="#">FAQs</a>
-          <a class="contact" href="#">Contact Us</a>
-        </div>
+            <div
+              class="nav-links lg:static absolute lg:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full lg:w-auto flex items-center justify-between px-16 lg:px-0 transition-all duration-500 ease-in-out"
+            >
+              <ul
+                class="flex lg:flex-row flex-col lg:items-center font-bold p-2 gap-4 text-[#ffffff] lg:text-primary text-[20px] lg:text-[16px]"
+              >
+                <li><a class="discover" href="#">Discover</a></li>
+                <li><a class="about" href="#">About Us</a></li>
+              </ul>
+              <ul
+                class="flex lg:flex-row flex-col lg:items-center font-bold p-2 gap-4 text-[#ffffff] lg:text-primary text-[20px] lg:text-[16px]"
+              >
+                <li><a class="faqs" href="#">FAQs</a></li>
+                <li><a class="contact" href="#">Contact Us</a></li>
+              </ul>
+            </div>
 
-        <div class="flex items-center gap-6 font-bold text-[16px]">
-          <button class="cursor-pointer">Log in</button>
-          <button class="button">Sign Up</button>
+            <div class="flex items-center gap-4 font-bold text-[16px]">
+              <button class="hidden md:block cursor-pointer">Log in</button>
+              <button class="button">Sign Up</button>
+              <ion-icon
+                onclick="onToggleMenu(this)"
+                class="text-3xl cursor-pointer lg:hidden"
+                name="menu-outline"
+              ></ion-icon>
+            </div>
+          </div>
+
+          <!-- hero section -->
+          <div
+            class="flex flex-col lg:flex-row justify-between mt-[150px] lg:mt-[300px] mx-4 md:mx-16"
+          >
+            <div
+              class="text-[28px] md:text-[32px] leading-tight font-bold w-[400px] md:w-[531px] h-[160px] text-[#FFFFFF]"
+            >
+              Ready to Rock? Discover the Hottest Events Here - Your Calendar's
+              New Best Friend!
+            </div>
+
+            <div
+              class="flex items-center justify-between rounded-[20px] mt-8 p-1 md:p-6 bg-[#FFFFFF] w-[100%] md:w-[660px] h-[80px] md:h-[100px]"
+            >
+              <!-- search bar ??-->
+              <div class="flex items-center justify-center gap-4 p-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="hidden md:block size-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+
+                <input
+                  class="outline-none w-24 md:w-[143px] h-[19px] text-[16px] text-[#4F4F4F]"
+                  type="text"
+                  placeholder="Search for an event"
+                />
+              </div>
+
+              <select
+                class="flex gap-1 md:gap-3 px-5 border-l-2 h-[30px] border-[#E0E0E0] outline-none text-[#4F4F4F]"
+              >
+                <option value="location">Categories</option>
+                <option value="location">Location</option>
+                <option value="event">Event</option>
+                <option value="artist">Artist</option>
+              </select>
+              <button class="button">Search</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- hero section -->
-      <div class="flex justify-between mt-[310px] mx-16">
-        <div
-          class="text-[32px] leading-tight font-bold w-[531px] h-[160px] text-[#FFFFFF]"
-        >
-          Ready to Rock? Discover the Hottest Events Here - Your Calendar's New
-          Best Friend!
+      <!-- Trending events -->
+      <div
+        class="flex flex-col my-16 mx-auto md:m-16 font-semibold bg-[#FFFFFF]"
+      >
+        <div class="flex justify-between">
+          <div class="text-[28px] leading-tight md:text-[32px]">
+            Trending events
+          </div>
+          <div
+            class="cursor-pointer flex items-center justify-center gap- md:gap-1"
+          >
+            <a class="text-primary" href="#"> View all trending events </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="hidden md:block size-5 text-primary"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
 
-        <div
-          class="flex items-center justify-between rounded-[20px] mt-8 p-6 bg-[#FFFFFF] w-[660px] h-[100px]"
-        >
-          <!-- search bar ??-->
-          <div class="flex items-center justify-center gap-4 p-4">
+        <div id="container">
+          <!-- <div class="card">
+        <img class="image" src="assets/Temi.JPG" alt="ISWIS Live Show" />
+        <div class="title">ISWIS Live Show</div>
+        <div class="date">Sun, Oct 3rd . 6pm</div>
+        <div class="description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
+          nesciunt enim iure, alias reprehenderit cupiditate, explicabo
+          suscipit deleniti laborum laudantium hjugfdsrg.
+        </div>
+        <div class="details">
+          <a href="#"
+            >View details
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -54,177 +149,141 @@
             >
               <path
                 fill-rule="evenodd"
-                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
                 clip-rule="evenodd"
               />
             </svg>
-
-            <input
-              class="outline-none w-[143px] h-[19px] text-[16px] text-[#4F4F4F]"
-              type="text"
-              placeholder="Search for an event"
-            />
-          </div>
-
-          <select
-            class="flex gap-3 px-5 border-l-2 h-[30px] border-[#E0E0E0] outline-none text-[#4F4F4F]"
-          >
-            <option value="location">Categories</option>
-            <option value="location">Location</option>
-            <option value="event">Event</option>
-            <option value="artist">Artist</option>
-          </select>
-          <button class="button">Search</button>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <!-- Trending events -->
-    <div class="flex flex-col m-16 font-semibold bg-[#FFFFFF]">
-      <div class="flex justify-between">
-        <div class="text-[32px]">Trending events</div>
-        <div class="cursor-pointer flex items-center justify-center gap-1">
-          <a class="text-primary" href="#"> View all trending events </a>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="size-5 text-primary"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
+      </div> -->
         </div>
       </div>
 
-      <div id="container">
-        <!-- <div class="card">
-          <img class="image" src="assets/Temi.JPG" alt="ISWIS Live Show" />
-          <div class="title">ISWIS Live Show</div>
-          <div class="date">Sun, Oct 3rd . 6pm</div>
-          <div class="description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-            nesciunt enim iure, alias reprehenderit cupiditate, explicabo
-            suscipit deleniti laborum laudantium hjugfdsrg.
-          </div>
-          <div class="details">
-            <a href="#"
-              >View details
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="size-4"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
-        </div> -->
-      </div>
-    </div>
-
-    <!-- Event Types -->
-    <div class="my-16 grid grid-cols-3 justify-between mx-16">
-      <div class="my-16">
-        <p class="text-[32px] leading-[37.5px] font-gilroy font-semibold">
-          Discover a World of Events Tailored Just for You
-        </p>
-        <button
-          class="mt-8 flex items-center justify-center bg-[#783EAD] w-[154px] h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] cursor-pointer"
-        >
-          view all events
-        </button>
-      </div>
-
-      <div>
-        <div
-          class="relative w-[421px] h-[240px] bg-[url(/assets/image1.jpg)] my-6 bg-cover bg-center rounded-lg shadow-lg"
-        >
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
-          >
-            <h1 class="text-white text-2xl font-normal">Online Events</h1>
-          </div>
-        </div>
-
-        <div
-          class="relative w-[421px] h-[240px] bg-[url(/assets/image2.jpg)] mt-8 bg-cover bg-center rounded-lg shadow-lg"
-        >
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
-          >
-            <h1 class="text-white text-2xl font-normal">Hybrid Events</h1>
-          </div>
-        </div>
-      </div>
-
+      <!-- Event Types -->
       <div
-        class="relative w-[421px] h-[240px] bg-[url(/assets/image3.jpg)] my-6 bg-cover bg-center rounded-lg shadow-lg"
+        class="my-8 md:my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8"
       >
+        <!-- Left Section -->
+        <div>
+          <p
+            class="mt-8 md:mt-32 lg:mt-16 text-[32px] md:text-[28px] lg:text-[32px] leading-[37.5px] font-gilroy font-semibold"
+          >
+            Discover a World of Events Tailored Just for You
+          </p>
+          <button
+            class="mt-8 flex items-center justify-center bg-[#783EAD] w-[154px] h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] cursor-pointer"
+          >
+            View All Events
+          </button>
+        </div>
+
+        <!-- Center Section -->
+        <div>
+          <div
+            class="relative w-full h-[240px] bg-[url(/assets/image1.jpg)] bg-cover bg-center rounded-lg shadow-lg"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
+            >
+              <h1 class="text-white text-2xl font-normal">Online Events</h1>
+            </div>
+          </div>
+
+          <div
+            class="relative w-full h-[240px] bg-[url(/assets/image2.jpg)] mt-8 bg-cover bg-center rounded-lg shadow-lg"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
+            >
+              <h1 class="text-white text-2xl font-normal">Hybrid Events</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
         <div
-          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
+          class="relative w-full h-[240px] bg-[url(/assets/image3.jpg)] bg-cover bg-center rounded-lg shadow-lg"
         >
-          <h1 class="text-white text-2xl font-normal">Physical Events</h1>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <div
-      class="flex justify-between w-[100%] h-[343px] bg-primary text-white mt-[100px] py-12 px-16"
-    >
-      <div class="flex flex-col gap-4">
-        <p class="text-[32px] font-bold leading-[37.5px]">rendezvous</p>
-        <p class="w-[332px] font-thin text-[16px] leading-[18.75px]">
-          Your Personal Event Sherpa: Curating Awesome, One Click at a Time
-        </p>
-      </div>
-
-      <div class="flex justify-around gap-[84px]">
-        <!-- Feature links-->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Feature</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <a href="#">Events discovery</a>
-            <a href="#">Ticketing</a>
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg"
+          >
+            <h1 class="text-white text-2xl font-normal">Physical Events</h1>
           </div>
         </div>
+      </div>
 
-        <!-- Company links -->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Company</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <a href="#">About us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Careers</a>
-            <a href="#">Support</a>
-          </div>
+      <!-- footer -->
+      <div
+        class="flex flex-col lg:flex-row lg:justify-between w-[100%] h-auto lg:h-[343px] bg-primary text-white mt-16 md:mt-32 py-12 px-8 lg:px-16"
+      >
+        <div class="flex flex-col gap-4 mb-8 lg:mb-0">
+          <p class="text-[32px] font-bold leading-[37.5px]">rendezvous</p>
+          <p
+            class="w-[100%] lg:w-[332px] font-thin text-[16px] leading-[18.75px]"
+          >
+            Your Personal Event Sherpa: Curating Awesome, One Click at a Time
+          </p>
         </div>
 
-        <!-- contact us info -->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Contact Us</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <p>info@events.com</p>
-            <p>+234 701 345 6789</p>
-            <div>
-              <p>Race Course, 8/9 Marina,</p>
-              <p>Onikan, Lagos Lagos, 4aa Force</p>
-              <p>Rd, Lagos Island 102273, Lagos</p>
+        <div
+          class="flex flex-col md:flex-row justify-around gap-12 lg:gap-[84px]"
+        >
+          <!-- Feature links-->
+          <div class="flex flex-col gap-[18px]">
+            <p class="font-bold text-[28px] lg:text-[20px]">Feature</p>
+            <div
+              class="flex flex-row md:flex-col gap-8 lg:gap-[10px] font-semibold text-[16px]"
+            >
+              <a href="#">Events discovery</a>
+              <a href="#">Ticketing</a>
+            </div>
+          </div>
+
+          <!-- Company links -->
+          <div class="flex flex-col gap-[18px]">
+            <p class="font-bold text-[28px] lg:text-[20px]">Company</p>
+            <div
+              class="flex flex-row md:flex-col gap-8 lg:gap-[10px] font-semibold text-[16px]"
+            >
+              <a href="#">About us</a>
+              <a href="#">FAQs</a>
+              <a href="#">Careers</a>
+              <a href="#">Support</a>
+            </div>
+          </div>
+
+          <!-- contact us info -->
+          <div class="flex flex-col md:gap-8 lg:gap-[18px]">
+            <p class="font-bold text-[24px] lg:text-[20px]">Contact Us</p>
+            <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
+              <p>info@events.com</p>
+              <p>+234 701 345 6789</p>
+              <div>
+                <p>Race Course, 8/9 Marina,</p>
+                <p>Onikan, Lagos Lagos, 4aa Force</p>
+                <p>Rd, Lagos Island 102273, Lagos</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <script src="./js/index.js" defer type="module"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      const onToggleMenu = (e) => {
+        e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+        navLinks.classList.toggle("top-[2%]");
+      };
+    </script>
   </body>
 </html>
