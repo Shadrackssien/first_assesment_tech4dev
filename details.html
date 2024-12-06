@@ -7,24 +7,42 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
-    <!-- navigation bar -->
+    <div class="overflow-x-hidden">
+      <!-- navigation bar -->
     <div
-      class="flex justify-between mt-[40px] mx-16 items-center h-[80px] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
-    >
-      <div class="p-2 gap-2 font-bold text-3xl cursor-pointer">rendezvous</div>
-
-      <div class="p-2 gap-4 flex font-bold text-[16px]">
-        <a class="discover" href="#">Discover</a>
-        <a class="about" href="#">About Us</a>
-        <a class="faqs" href="#">FAQs</a>
-        <a class="contact" href="#">Contact Us</a>
-      </div>
-
-      <div class="flex items-center gap-6 font-bold text-[16px]">
-        <button class="cursor-pointer">Log in</button>
-        <button class="button">Sign Up</button>
-      </div>
+    class="flex justify-between mt-12 mx-auto items-center w-[92%] h-[80px] text-primary rounded-[20px] bg-[#FFFFFF99] p-[12px_24px]"
+  >
+    <div class="font-bold md:text-3xl text-2xl cursor-pointer">
+      rendezvous
     </div>
+
+    <div
+      class="nav-links lg:static absolute lg:min-h-fit min-h-[40vh] left-0 top-[-100%] w-full lg:w-auto flex items-center justify-between px-16 lg:px-0 transition-all duration-500 ease-in-out"
+    >
+      <ul
+        class="flex lg:flex-row flex-col lg:items-center font-bold p-2 gap-4 text-[#ffffff] lg:text-primary text-[20px] lg:text-[16px]"
+      >
+        <li><a class="discover" href="#">Discover</a></li>
+        <li><a class="about" href="#">About Us</a></li>
+      </ul>
+      <ul
+        class="flex lg:flex-row flex-col lg:items-center font-bold p-2 gap-4 text-[#ffffff] lg:text-primary text-[20px] lg:text-[16px]"
+      >
+        <li><a class="faqs" href="#">FAQs</a></li>
+        <li><a class="contact" href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="flex items-center gap-4 font-bold text-[16px]">
+      <button class="hidden md:block cursor-pointer">Log in</button>
+      <button class="button">Sign Up</button>
+      <ion-icon
+        onclick="onToggleMenu(this)"
+        class="text-3xl cursor-pointer lg:hidden"
+        name="menu-outline"
+      ></ion-icon>
+    </div>
+  </div>
 
     <!-- product details -->
     <div class="details-container">
@@ -33,51 +51,76 @@
 
     <!-- footer -->
     <div
-      class="flex justify-between w-[100%] h-[343px] bg-primary text-white mt-[100px] py-12 px-16"
+    class="flex flex-col lg:flex-row lg:justify-between w-[100%] h-auto lg:h-[343px] bg-primary text-white mt-16 md:mt-32 py-12 px-8 lg:px-16"
+  >
+    <div class="flex flex-col gap-4 mb-8 lg:mb-0">
+      <p class="text-[32px] font-bold leading-[37.5px]">rendezvous</p>
+      <p
+        class="w-[100%] lg:w-[332px] font-thin text-[16px] leading-[18.75px]"
+      >
+        Your Personal Event Sherpa: Curating Awesome, One Click at a Time
+      </p>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row justify-around gap-12 lg:gap-[84px]"
     >
-      <div class="flex flex-col gap-4">
-        <p class="text-[32px] font-bold leading-[37.5px]">rendezvous</p>
-        <p class="w-[332px] font-normal text-[16px] leading-[18.75px]">
-          Your Personal Event Sherpa: Curating Awesome, One Click at a Time
-        </p>
+      <!-- Feature links-->
+      <div class="flex flex-col gap-[18px]">
+        <p class="font-bold text-[28px] lg:text-[20px]">Feature</p>
+        <div
+          class="flex flex-row md:flex-col gap-8 lg:gap-[10px] font-semibold text-[16px]"
+        >
+          <a href="#">Events discovery</a>
+          <a href="#">Ticketing</a>
+        </div>
       </div>
 
-      <div class="flex justify-around gap-[84px]">
-        <!-- Feature links-->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Feature</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <a href="#">Events discovery</a>
-            <a href="#">Ticketing</a>
-          </div>
+      <!-- Company links -->
+      <div class="flex flex-col gap-[18px]">
+        <p class="font-bold text-[28px] lg:text-[20px]">Company</p>
+        <div
+          class="flex flex-row md:flex-col gap-8 lg:gap-[10px] font-semibold text-[16px]"
+        >
+          <a href="#">About us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Careers</a>
+          <a href="#">Support</a>
         </div>
+      </div>
 
-        <!-- Company links -->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Company</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <a href="#">About us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Careers</a>
-            <a href="#">Support</a>
-          </div>
-        </div>
-
-        <!-- contact us info -->
-        <div class="flex flex-col gap-[18px]">
-          <p class="font-bold text-[20px]">Contact Us</p>
-          <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
-            <p>info@events.com</p>
-            <p>+234 701 345 6789</p>
-            <div>
-              <p>Race Course, 8/9 Marina,</p>
-              <p>Onikan, Lagos Lagos, 4aa Force</p>
-              <p>Rd, Lagos Island 102273, Lagos</p>
-            </div>
+      <!-- contact us info -->
+      <div class="flex flex-col md:gap-8 lg:gap-[18px]">
+        <p class="font-bold text-[24px] lg:text-[20px]">Contact Us</p>
+        <div class="flex flex-col gap-[10px] font-semibold text-[16px]">
+          <p>info@events.com</p>
+          <p>+234 701 345 6789</p>
+          <div>
+            <p>Race Course, 8/9 Marina,</p>
+            <p>Onikan, Lagos Lagos, 4aa Force</p>
+            <p>Rd, Lagos Island 102273, Lagos</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+    </div>
     <script src="./js/details.js" defer type="module"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      const onToggleMenu = (e) => {
+        e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+        navLinks.classList.toggle("top-[2%]");
+      };
+    </script>
   </body>
 </html>

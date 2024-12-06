@@ -14,7 +14,7 @@
     @apply m-0 p-0 box-border font-gilroy;
   }
   .button {
-    @apply flex items-center justify-center bg-[#783EAD] w-[110px] md:w-[120px] h-10 md:h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] py-3 px-6 gap-2 cursor-pointer;
+    @apply flex items-center justify-center bg-[#783EAD] w-[110px] md:w-[120px] h-10 md:h-[44px] hover:bg-[#380048] text-[#ffffff] font-semibold rounded-[10px] py-3 px-4 gap-2 cursor-pointer;
   }
 }
 

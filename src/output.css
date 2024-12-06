@@ -620,8 +620,8 @@ video {
   background-color: rgb(120 62 173 / var(--tw-bg-opacity, 1));
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -661,11 +661,6 @@ video {
 
 .top-\[2\%\] {
   top: 2%;
-}
-
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
 }
 
 .mx-4 {
@@ -728,16 +723,8 @@ video {
   margin-top: 2rem;
 }
 
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
 .mt-\[150px\] {
   margin-top: 150px;
-}
-
-.mt-\[40px\] {
-  margin-top: 40px;
 }
 
 .line-clamp-2 {
@@ -800,10 +787,6 @@ video {
   height: 30px;
 }
 
-.h-\[343px\] {
-  height: 343px;
-}
-
 .h-\[44px\] {
   height: 44px;
 }
@@ -860,24 +843,16 @@ video {
   width: 18px;
 }
 
-.w-\[332px\] {
-  width: 332px;
-}
-
 .w-\[400px\] {
   width: 400px;
 }
 
-.w-\[650px\] {
-  width: 650px;
-}
-
-.w-\[875px\] {
-  width: 875px;
-}
-
 .w-\[92\%\] {
   width: 92%;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .w-auto {
@@ -940,10 +915,6 @@ video {
   gap: 1rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-8 {
   gap: 2rem;
 }
@@ -958,10 +929,6 @@ video {
 
 .gap-\[24px\] {
   gap: 24px;
-}
-
-.gap-\[84px\] {
-  gap: 84px;
 }
 
 .gap-\[8px\] {
@@ -1144,6 +1111,10 @@ video {
   font-size: 16px;
 }
 
+.text-\[17px\] {
+  font-size: 17px;
+}
+
 .text-\[20px\] {
   font-size: 20px;
 }
@@ -1323,9 +1294,18 @@ video {
     margin-right: 4rem;
   }
 
+  .md\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:mt-32 {
@@ -1346,6 +1326,10 @@ video {
 
   .md\:w-\[531px\] {
     width: 531px;
+  }
+
+  .md\:w-\[650px\] {
+    width: 650px;
   }
 
   .md\:w-\[660px\] {
@@ -1389,6 +1373,14 @@ video {
     line-height: 2.25rem;
   }
 
+  .md\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .md\:text-\[24px\] {
+    font-size: 24px;
+  }
+
   .md\:text-\[28px\] {
     font-size: 28px;
   }
@@ -1401,6 +1393,16 @@ video {
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
+  }
+
+  .lg\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .lg\:mb-0 {
@@ -1430,6 +1432,10 @@ video {
 
   .lg\:w-\[332px\] {
     width: 332px;
+  }
+
+  .lg\:w-\[875px\] {
+    width: 875px;
   }
 
   .lg\:w-auto {
